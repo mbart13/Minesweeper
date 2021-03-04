@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.title {
+    font-weight: normal;
+}
+
+.btn {
+    background-color: var(--clr-red);
+    border: none;
+    padding: .6em 1.2em;
+    font-size: .8rem;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.flag-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emoji {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.not-animated {
+    animation: none;
+}

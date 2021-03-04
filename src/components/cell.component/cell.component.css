@@ -1,0 +1,33 @@
+.cell {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.revealed, .flagged {
+    box-shadow: 0 0 30px darkred;
+    outline: .3rem solid darkred;
+}
+
+.revealed {
+    background-color: var(--clr-bg) !important;
+}
+
+.flagged {
+    background: url("../../assets/target.svg") center /contain  no-repeat;
+}
+
+.fired {
+    background: url("../../assets/fired.svg") center / contain  no-repeat;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

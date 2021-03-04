@@ -1,0 +1,66 @@
+:root {
+  --clr-bg: #222725;
+  --clr-red: #58141D;
+  --box-shadow: 0 0 20px 5px darkred;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--clr-bg);
+  color: #fff;
+  font-family: 'Roboto', 'Segoe UI', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minesweeper {
+  max-width: 400px;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 30px;
+}
+
+
+.bomb {
+  height: 3vmin;
+  pointer-events: none;
+}
+
+.black-bomb {
+  width: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .bomb {
+    height: 6vmin;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bomb {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
