@@ -89,7 +89,7 @@ const AppProvider = ({ children }) => {
         const { rowIndex, columnIndex } = clickedCell;
         let updatedBoard = [...board]
 
-        if (clickedCell.isFlagged) {
+        if (clickedCell.isFlagged || gameStatus === StatesOfGame.GAME_OVER) {
             return;
         }
 
@@ -119,6 +119,11 @@ const AppProvider = ({ children }) => {
 
     const handleRightClick = (event, cell) => {
         event.preventDefault();
+
+        if (gameStatus === StatesOfGame.GAME_OVER) {
+            return;
+        }
+
         const { rowIndex, columnIndex } = cell;
         let updatedBoard = [...board]
 

@@ -20,9 +20,8 @@ const Cell = ({cell}) => {
         return cellStatus;
     }
 
-
     return (
-        <div className={'cell' + (applyClass() || '') }
+        <div className={'cell' + (applyClass() || '')}
              onContextMenu={(e) => handleRightClick(e, cell)}
              onClick={() => handleClick(cell)}>
             <span className={cell.isMined ? 'hidden' : ''}>{cell.adjacentMines || ''}</span>
