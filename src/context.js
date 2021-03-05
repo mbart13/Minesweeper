@@ -155,13 +155,15 @@ const AppProvider = ({ children }) => {
                     if (!board[i][j].isMined) {
                         isWin =  board[i][j].isRevealed;
                     }
-                    if (!isWin) break;
+
+                    if (!isWin) return;
                 }
             }
 
             return isWin
         }
         if (isWin()) {
+            console.log('inside if statement in useEffect');
             setGameStatus(StatesOfGame.GAME_WON)
         }
     }, [board])
