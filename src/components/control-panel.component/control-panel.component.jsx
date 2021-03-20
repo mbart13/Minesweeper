@@ -40,7 +40,7 @@ const ControlPanel = () => {
             <header>
                 <h1 className="title">Minesweeper</h1>
                 <img src={bomb}
-                     className={'bomb' + (gameStatus === StatesOfGame.GAME_OVER || gameStatus === StatesOfGame.GAME_WON ? ' not-animated' : '')} alt="logo" />
+                     className={'bomb' + (gameStatus !== StatesOfGame.FIRST_CLICK  ? ' not-animated' : '')} alt="logo" />
             </header>
             <div className="status-bar">
                 <div className="flag-counter">

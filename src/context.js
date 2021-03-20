@@ -1,5 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react'
 import {StatesOfGame} from './status'
+import cloneDeep from 'lodash/cloneDeep';
+
 
 const NUMBER_OF_BOMBS = 10;
 const NUMBER_OF_ROWS = 9;
@@ -63,7 +65,7 @@ const AppProvider = ({ children }) => {
         } else {
             for (let i = clickedCell.rowIndex - 1; i <= clickedCell.rowIndex + 1; i++) {
                 for (let j = clickedCell.columnIndex - 1; j <= clickedCell.columnIndex + 1; j++) {
-                    if (i >= 0 && i < updatedBoard.length && j >= 0 && j < updatedBoard[0].length && !updatedBoard[i][j].isRevealed && !updatedBoard[i][j].isMined) {
+                    if (i >= 0 && i < updatedBoard.length && j >= 0 && j < updatedBoard[i].length && !updatedBoard[i][j].isRevealed && !updatedBoard[i][j].isMined) {
                         updatedBoard[i][j].isRevealed = true
                         revealEmptyCells(updatedBoard[i][j], updatedBoard)
                     }
@@ -87,9 +89,9 @@ const AppProvider = ({ children }) => {
 
     const handleClick = (clickedCell) => {
         const { rowIndex, columnIndex } = clickedCell;
-        let updatedBoard = [...board]
+        let updatedBoard = cloneDeep(board)
 
-        if (clickedCell.isFlagged || gameStatus === StatesOfGame.GAME_OVER) {
+        if (clickedCell.isFlagged || gameStatus === StatesOfGame.GAME_OVER || gameStatus === StatesOfGame.GAME_WON) {
             return;
         }
 
@@ -125,7 +127,7 @@ const AppProvider = ({ children }) => {
         }
 
         const { rowIndex, columnIndex } = cell;
-        let updatedBoard = [...board]
+        let updatedBoard = cloneDeep(board)
 
         if (!cell.isFlagged && !cell.isRevealed && flagCounter > 0) {
             updatedBoard[rowIndex][columnIndex].isFlagged = true;
@@ -156,14 +158,14 @@ const AppProvider = ({ children }) => {
                         isWin =  board[i][j].isRevealed;
                     }
 
-                    if (!isWin) return;
+                    if (!isWin)
+                        return;
                 }
             }
 
             return isWin
         }
         if (isWin()) {
-            console.log('inside if statement in useEffect');
             setGameStatus(StatesOfGame.GAME_WON)
         }
     }, [board])
