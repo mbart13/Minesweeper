@@ -1,0 +1,24 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  background-color: #C91052;
+  padding: .5rem 1.5rem;
+  margin-top: 5rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.link:hover {
+  background-color: #ee1762;
+}

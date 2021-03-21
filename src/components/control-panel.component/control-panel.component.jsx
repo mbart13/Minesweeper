@@ -11,16 +11,15 @@ const ControlPanel = () => {
 
     useEffect(() => {
         let interval = null;
-        if (gameStatus === StatesOfGame.FIRST_CLICK) {
+        if (gameStatus === StatesOfGame.FIRST_MOVE) {
             interval = setInterval(() => {
                 setTime(prevTime => prevTime + 1000)
             }, 1000)
         } else if (gameStatus === StatesOfGame.NOT_STARTED) {
             setTime(0)
-        } else {
-            clearInterval(interval)
         }
         return () => clearInterval(interval)
+
     }, [gameStatus])
 
     const updateEmoji = () => {
@@ -40,7 +39,7 @@ const ControlPanel = () => {
             <header>
                 <h1 className="title">Minesweeper</h1>
                 <img src={bomb}
-                     className={'bomb' + (gameStatus !== StatesOfGame.FIRST_CLICK  ? ' not-animated' : '')} alt="logo" />
+                     className={'bomb bomb-small' + (gameStatus !== StatesOfGame.FIRST_MOVE  ? ' not-animated' : '')} alt="rotating bomb logo" />
             </header>
             <div className="status-bar">
                 <div className="flag-counter">

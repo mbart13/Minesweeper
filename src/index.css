@@ -1,7 +1,7 @@
 :root {
   --clr-bg: #222725;
   --clr-red: #58141D;
-  --box-shadow: 0 0 20px 5px darkred;
+  --box-shadow: 0 0 1.25rem .3125rem darkred;
 }
 
 *, ::after, ::before {
@@ -28,16 +28,21 @@ main {
 }
 
 .minesweeper {
-  max-width: 400px;
+  max-width: 25rem;
   padding: 2rem;
   box-shadow: var(--box-shadow);
-  border-radius: 30px;
+  border-radius: 1.8rem;
 }
 
 
-.bomb {
+.bomb-small {
   height: 3vmin;
-  pointer-events: none;
+  /* pointer-events: none; */
+}
+
+.bomb-large {
+  height: 40vmin;
+  /* pointer-events: none; */
 }
 
 .black-bomb {
@@ -45,7 +50,7 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-  .bomb {
+  .bomb-small {
     height: 6vmin;
   }
 }

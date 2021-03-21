@@ -1,8 +1,7 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState } from 'react'
 import {StatesOfGame} from './status'
 import cloneDeep from 'lodash/cloneDeep';
-
-
+import { useLocation } from 'react-router-dom';
 const NUMBER_OF_BOMBS = 10;
 const NUMBER_OF_ROWS = 9;
 const NUMBER_OF_COLUMNS = 8;
@@ -43,6 +42,7 @@ const AppProvider = ({ children }) => {
     const [board, setBoard] = useState(initBoard());
     const [flagCounter, setFlagCounter] = useState(NUMBER_OF_BOMBS);
     const [gameStatus, setGameStatus] = useState(StatesOfGame.NOT_STARTED);
+    let location = useLocation();
 
     const getAdjacentMines = (rowIndex, columnIndex) => {
         let numMines = 0;
@@ -112,7 +112,7 @@ const AppProvider = ({ children }) => {
         }
 
         if (gameStatus === StatesOfGame.NOT_STARTED) {
-            setGameStatus(StatesOfGame.FIRST_CLICK)
+            setGameStatus(StatesOfGame.FIRST_MOVE)
         }
 
         setBoard(updatedBoard);
@@ -170,6 +170,10 @@ const AppProvider = ({ children }) => {
         }
     }, [board])
 
+    useEffect(() => {
+        restart()
+    }, [location])
+
     return (
         <AppContext.Provider
             value={{
@@ -182,12 +186,11 @@ const AppProvider = ({ children }) => {
             {children}
         </AppContext.Provider>
     )
-
 }
 
 export const useGlobalContext = () => {
     return useContext(AppContext)
 }
 
-export { AppContext, AppProvider }
+export { AppProvider }
 
