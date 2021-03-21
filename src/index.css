@@ -23,6 +23,7 @@ body {
 main {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -68,4 +69,47 @@ main {
   to {
     transform: rotate(360deg);
   }
+}
+
+.btn {
+  padding: .5rem 1.5rem;
+  border-radius: .5rem;
+  border: none;
+  text-transform: uppercase;
+
+}
+
+.show-help {
+  background: black;
+  color: #fff;
+}
+
+.close-help {
+  background-color: #fff;
+  color:  black;
+  font-weight: bold;
+}
+
+.close-help:hover {
+  background-color: rgb(204, 197, 197);
+  cursor: pointer;
+
+}
+
+.show-help:hover {
+  cursor: pointer;
+  background: rgb(19, 16, 16);
+}
+
+.show-help:focus {
+  outline: none;
+  font-weight: bold;
+}
+
+.modal {
+  margin-top: 3rem;
+}
+
+.modal-text {
+  padding-bottom: 1rem;
 }

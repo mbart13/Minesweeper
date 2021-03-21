@@ -11,14 +11,14 @@ header {
     letter-spacing: 1px;
 }
 
-.btn {
+/* .btn {
     background-color: var(--clr-red);
     border: none;
     padding: .6em 1.2em;
     font-size: .8rem;
     border-radius: 12px;
     color: #fff;
-}
+} */
 
 .status-bar {
     display: flex;
