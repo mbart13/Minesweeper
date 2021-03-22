@@ -1,0 +1,17 @@
+.help-modal {
+  padding: 1rem;
+}
+
+.modal-text {
+  padding-bottom: 1rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  cursor: pointer;
+}

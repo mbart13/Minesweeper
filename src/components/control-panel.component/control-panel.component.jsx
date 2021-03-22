@@ -36,7 +36,7 @@ const ControlPanel = () => {
 
     return (
         <>
-            <header>
+            <header className="control-panel-header">
                 <h1 className="title">Minesweeper</h1>
                 <img src={bomb}
                      className={'bomb bomb-small' + (gameStatus !== StatesOfGame.FIRST_MOVE  ? ' not-animated' : '')} alt="rotating bomb logo" />

@@ -1,4 +1,4 @@
-header {
+.control-panel-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,14 +11,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* .btn {
-    background-color: var(--clr-red);
-    border: none;
-    padding: .6em 1.2em;
-    font-size: .8rem;
-    border-radius: 12px;
-    color: #fff;
-} */
 
 .status-bar {
     display: flex;

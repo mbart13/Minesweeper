@@ -1,0 +1,15 @@
+.main-section {
+  height: 100vh;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.minesweeper {
+  max-width: 25rem;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 1.8rem;
+}
