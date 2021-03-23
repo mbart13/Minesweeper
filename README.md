@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Minesweeper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/36601103/112132582-114fda80-8bcb-11eb-9ac8-5be0f05a8354.png)
 
-## Available Scripts
+This is react version of the classic game.
+To see the live project go [here](https://minesweeper-mbart13.vercel.app)
 
-In the project directory, you can run:
+## About Project
+Project is part of Jetbrains Academy frontend developer track and it consisted of 5 stages, during each you have to implement some functionality according to requirements you are given. To pass a stage all unit tests prepared by Jetbrains team need to pass.
 
-### `yarn start`
+## Tools and techniques
+In this project I used:
+- react with hooks (useState, useEffect, useContext, useHistory and also a custom hook)
+- react router
+- css grid for minefield
+- react-modal
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Original requirements
+- make a game board look similar to the screenshot given
+- place 10 bombs randomly on the field
+- if player's first move is a bomb, field should be recreated
+- player can uncover field with a click and flag field with a right click
+- uncovered cell should display number indicating how many mines surround this cell
+- if uncovered cell is blank, all adjacent non-mined cells should automatically be uncovered recursively
+- timer starting immediately after first click and stopping when player either wins or loses
+- emoji reflecting current game status :)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I added some extra things:
+- intro page
+- modal with help
+- rotating bomb synchronized with timer
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Main Challenges
+This was my first react project, which was a challenge itself, but also I had to implement various algorithms (one of them recursive) to make the game work.  
+I learned how to break the app into smaller components, manage state using functional components. I also used Context API for passing data between components. 
+I didn't focus much on styling in this project, but more on functionalities.
