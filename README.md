@@ -6,8 +6,6 @@ This is react version of the classic game.
 To see the live project go [here](https://minesweeper-mbart13.vercel.app)
 
 ## About Project
-This was a challenging project, not only this was my first react project, but also I had to implement various algorithms (one of them recursive) to make the game work.
-
 Project is part of Jetbrains Academy frontend developer track and it consisted of 5 stages, during each you have to implement some functionality according to requirements you are given. To pass a stage all unit tests prepared by Jetbrains team need to pass.
 
 ## Tools and techniques
