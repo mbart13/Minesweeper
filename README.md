@@ -23,8 +23,6 @@ In this project I used:
 - uncovered cell should display number indicating how many mines surround this cell
 - if uncovered cell is blank, all adjacent non-mined cells should automatically be uncovered recursively
 - timer starting immediately after first click and stopping when player either wins or loses
-- restarting the game
-- tracking game status
 - emoji reflecting current game status :)
 
 I added some extra things:
