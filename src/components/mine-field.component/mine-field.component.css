@@ -3,9 +3,3 @@
     grid-template-columns: repeat(8, 1fr);
     grid-gap: .3rem;
 }
-
-.cell {
-    background-color: black;
-    width: 30px;
-    height: 30px;
-}

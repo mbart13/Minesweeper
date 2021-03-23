@@ -19,6 +19,7 @@ const ShowHelpModal = () => {
       width: '80%',
       maxWidth: '50rem',
       fontSize:'1.2rem',
+      maxHeight: '31.25rem',
       border: 'none'
     },
     overlay: {
