@@ -16,18 +16,22 @@ In this project I used:
 - react-modal
 
 ## Original requirements
+- make a game board look similar to the screenshot given
 - place 10 bombs randomly on the field
 - if player's first move is a bomb, field should be recreated
 - player can uncover field with a click and flag field with a right click
 - uncovered cell should display number indicating how many mines surround this cell
 - if uncovered cell is blank, all adjacent non-mined cells should automatically be uncovered recursively
 - timer starting immediately after first click and stopping when player either wins or loses
+- restarting the game
+- tracking game status
+- emoji reflecting current game status :)
 
 I added some extra things:
 - intro page
 - modal with help
 - rotating bomb synchronized with timer
-- emoji reflecting current game status :)
+
 
 ## Main Challenges
 This was my first react project, which was a challenge itself, but also I had to implement various algorithms (one of them recursive) to make the game work.  
