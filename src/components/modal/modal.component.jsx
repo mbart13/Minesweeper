@@ -16,7 +16,7 @@ const ShowHelpModal = () => {
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
       background: 'black',
-      width: '80%',
+      width: '90%',
       maxWidth: '50rem',
       fontSize:'1.2rem',
       maxHeight: '31.25rem',
