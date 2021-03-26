@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState } from 'react'
-import {StatesOfGame} from './status'
+import {StatesOfGame} from './util/status'
 import cloneDeep from 'lodash/cloneDeep';
 import { useLocation } from 'react-router-dom';
 const NUMBER_OF_BOMBS = 10;

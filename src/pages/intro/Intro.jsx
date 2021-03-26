@@ -9,7 +9,7 @@ const Intro = () => {
     <div>
       <header className="App-header">
         <img src={bomb} className="bomb bomb-large" alt="logo" />
-        <Link className="link" to="/game">Play Game</Link>
+        <Link className="link" to="/game">Start Game</Link>
       </header>
     </div>
   )

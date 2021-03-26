@@ -1,19 +1,23 @@
 import React from 'react'
-import MineField from "../../components/mine-field.component/mine-field.component";
-import ControlPanel from "../../components/control-panel.component/control-panel.component";
+import MineField from "../../components/minefield/mine-field.component";
+import ControlPanel from "../../components/control-panel/control-panel.component";
 import {useGlobalContext} from "../../context";
 import './minesweeper.component.css'
+import ShowHelpModal from '../../components/modal/modal.component'
 
 const Minesweeper = () => {
   const { board, flagCounter } = useGlobalContext();
 
   return (
-    <main className="main-section">
-      <section className='minesweeper'>
+    <div className="container">
+      <ShowHelpModal/>
+      <main className="main-section">
+        <section className='minesweeper'>
           <ControlPanel flagCounter={flagCounter} />
           <MineField board={board} />
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   )
 }
 
