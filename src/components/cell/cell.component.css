@@ -8,7 +8,7 @@
 }
 
 .revealed, .flagged {
-    box-shadow: 0 0 30px darkred;
+    box-shadow: 0 0 24px darkred;
     outline: .3rem solid darkred;
 }
 
@@ -17,11 +17,12 @@
 }
 
 .flagged {
-    background: url("../../assets/target.svg") center /contain  no-repeat;
+    background: url("../../assets/target.svg") center / contain  no-repeat;
 }
 
 .fired {
     background: url("../../assets/fired.svg") center / contain  no-repeat;
+    background-color: black;
 }
 
 .cell:hover {
