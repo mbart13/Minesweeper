@@ -8,6 +8,13 @@ To see the live project go [here](https://minesweeper-mbart13.vercel.app)
 ## About Project
 Project is part of Jetbrains Academy frontend developer track and it consisted of 5 stages, during each you have to implement some functionality according to requirements you are given. To pass a stage all unit tests prepared by Jetbrains team need to pass.
 
+## Setup
+To run this project, install it locally using npm:
+
+```
+npm install && npm start
+```
+
 ## Tools and techniques
 In this project I used:
 - react with hooks (useState, useEffect, useContext, useHistory and also a custom hook)
