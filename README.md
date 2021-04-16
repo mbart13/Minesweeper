@@ -1,7 +1,5 @@
 # Minesweeper
 
-![image](https://user-images.githubusercontent.com/36601103/112132582-114fda80-8bcb-11eb-9ac8-5be0f05a8354.png)
-
 This is react version of the classic game.
 To see the live project go [here](https://minesweeper-mbart13.vercel.app)
 
