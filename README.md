@@ -40,5 +40,5 @@ I added some extra things:
 
 ## Main Challenges
 This was my first react project, which was a challenge itself, but also I had to implement various algorithms (one of them recursive) to make the game work.  
-I learned how to break the app into smaller components, manage state using functional components. I also used Context API for passing data between components. 
-I didn't focus much on styling in this project, but more on functionalities.
+I learned how to break the app into smaller parts and manage state using functional components. 
+I used Context API for passing data between components. I didn't focus much on styling in this project, but more on functionalities.
