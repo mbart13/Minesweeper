@@ -20,6 +20,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::after{
+  position: absolute;
+  width:0;
+  height:0;
+  overflow: hidden;
+  z-index: -1;
+  content:
+  url('./assets/fired.svg')
+  url('./assets/target.svg');
+}
+
 .container {
   display: flex;
   flex-direction: column;
