@@ -1,6 +1,6 @@
 :root {
   --clr-bg: #282c34;
-  --clr-red: #58141D;
+  --clr-red: darkred;
   --box-shadow: 0 0 1.25rem .3125rem darkred;
 }
 
@@ -81,11 +81,17 @@ body::after{
 .show-help {
   background: black;
   color: #fff;
+  font-weight: bold;
+}
+
+.show-help:hover,
+.show-help:focus {
+  background: #fff;
+  color: black;
 }
 
 .show-help:hover {
   cursor: pointer;
-  background: rgb(19, 16, 16);
 }
 
 .show-help:focus {
