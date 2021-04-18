@@ -28,8 +28,8 @@ const initBoard = () => {
     let randomRow = Math.floor((Math.random() * NUMBER_OF_ROWS));
     let randomColumn = Math.floor((Math.random() * NUMBER_OF_COLUMNS));
     while (board[randomRow][randomColumn].isMined) {
-        randomRow = Math.floor((Math.random() * NUMBER_OF_ROWS));
-        randomColumn = Math.floor((Math.random() * NUMBER_OF_COLUMNS));
+      randomRow = Math.floor((Math.random() * NUMBER_OF_ROWS));
+      randomColumn = Math.floor((Math.random() * NUMBER_OF_COLUMNS));
     }
     board[randomRow][randomColumn].isMined = true;
   }
@@ -42,7 +42,7 @@ const AppProvider = ({ children }) => {
   const [board, setBoard] = useState(initBoard());
   const [flagCounter, setFlagCounter] = useState(NUMBER_OF_BOMBS);
   const [gameStatus, setGameStatus] = useState(StatesOfGame.NOT_STARTED);
-  let location = useLocation();
+  const location = useLocation();
 
   const getAdjacentMines = (rowIndex, columnIndex) => {
     let numMines = 0;
@@ -98,7 +98,7 @@ const AppProvider = ({ children }) => {
     if (clickedCell.isMined && gameStatus === StatesOfGame.NOT_STARTED) {
       updatedBoard = initBoard()
       while (updatedBoard[rowIndex][columnIndex].isMined) {
-          updatedBoard = initBoard()
+        updatedBoard = initBoard()
       }
       clickedCell = updatedBoard[rowIndex][columnIndex]
     }
@@ -108,7 +108,7 @@ const AppProvider = ({ children }) => {
       updatedBoard = showAllMines();
 
     } else {
-        updatedBoard = revealEmptyCells(clickedCell, updatedBoard)
+      updatedBoard = revealEmptyCells(clickedCell, updatedBoard)
     }
 
     if (gameStatus === StatesOfGame.NOT_STARTED) {
@@ -123,18 +123,18 @@ const AppProvider = ({ children }) => {
     event.preventDefault();
 
     if (gameStatus === StatesOfGame.GAME_OVER) {
-        return;
+      return;
     }
 
     const { rowIndex, columnIndex } = cell;
     let updatedBoard = cloneDeep(board)
 
     if (!cell.isFlagged && !cell.isRevealed && flagCounter > 0) {
-        updatedBoard[rowIndex][columnIndex].isFlagged = true;
-        setFlagCounter(flagCounter - 1);
+      updatedBoard[rowIndex][columnIndex].isFlagged = true;
+      setFlagCounter(flagCounter - 1);
     } else if (cell.isFlagged) {
-        updatedBoard[rowIndex][columnIndex].isFlagged = false;
-        setFlagCounter(flagCounter + 1);
+      updatedBoard[rowIndex][columnIndex].isFlagged = false;
+      setFlagCounter(flagCounter + 1);
     }
     setBoard(updatedBoard);
   }
@@ -151,15 +151,15 @@ const AppProvider = ({ children }) => {
       for (let i = 0; i < NUMBER_OF_ROWS; i++) {
         for (let j = 0; j < NUMBER_OF_COLUMNS; j++) {
           if (board[i][j].isMined) {
-              isWin = board[i][j].isFlagged
+            isWin = board[i][j].isFlagged
           }
 
           if (!board[i][j].isMined) {
-              isWin =  board[i][j].isRevealed;
+            isWin =  board[i][j].isRevealed;
           }
 
           if (!isWin)
-              return;
+            return;
         }
       }
 
@@ -176,20 +176,20 @@ const AppProvider = ({ children }) => {
 
   return (
       <AppContext.Provider
-          value={{
-              board,
-              flagCounter,
-              gameStatus,
-              restart,
-              handleClick,
-              handleRightClick}}>
-          {children}
+        value={{
+          board,
+          flagCounter,
+          gameStatus,
+          restart,
+          handleClick,
+          handleRightClick}}>
+        {children}
       </AppContext.Provider>
   )
 }
 
 export const useGlobalContext = () => {
-    return useContext(AppContext)
+  return useContext(AppContext)
 }
 
 export { AppProvider }
